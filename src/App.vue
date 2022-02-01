@@ -1,18 +1,24 @@
 <template>
   <Navbar />
-  <Card />
+  <!--<Card />-->
+  <CardDisplay />
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
-import Card from './components/Card.vue'
+//import Card from './components/Card.vue'
+import CardDisplay from './components/CardDisplay.vue'
+//import axios from 'axios';
 
 export default {
   name: 'App',
   components: {
     Navbar,
-    Card
-  }
+    //Card,
+    CardDisplay
+  },
+
+  
 }
 </script>
 
