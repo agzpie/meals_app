@@ -1,20 +1,28 @@
 <template>
+<div class="container-fluid">
   <Navbar />
   <!--<Card />-->
-  <CardDisplay />
+  <div class="content">
+    <Sidebar />
+    <CardDisplay />
+
+  </div>
+
+</div>  
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
+import Sidebar from './components/Sidebar.vue';
 //import Card from './components/Card.vue'
-import CardDisplay from './components/CardDisplay.vue'
+import CardDisplay from './views/CardDisplay.vue'
 //import axios from 'axios';
 
 export default {
   name: 'App',
   components: {
     Navbar,
-    //Card,
+    Sidebar,
     CardDisplay
   },
 
@@ -30,5 +38,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.content {
+  display: flex;
+  flex-direction: row;
 }
 </style>

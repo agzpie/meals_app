@@ -11,45 +11,24 @@
     
         <div class="card-body">
             <h5 class="card-title">{{ meal.strMeal }}</h5>
-            <!-- <p class="card-text">{{ description }}</p> -->
         </div>
     </div>
 </template>
 
 <script>
-//import axios from 'axios';
 
 export default {
     name: 'Card',
     props: {
         meal: Object
     }
-    /*data() {
-        return {
-            id: null,
-            name: "",
-            description: "",
-            thumbnail: null
-        };
-    },
-    created() {
-        //let state = "";
-        // Simple GET request using axios
-        axios.get(`https://themealdb.com/api/json/v1/1/random.php`)
-        .then(response => {
-            console.log(response.data);
-            this.name = response.data.meals[0].strMeal;
-            this.description = response.data.meals[0].strInstructions;
-            this.thumbnail = response.data.meals[0].strMealThumb;
-        })
-        .catch( e => {
-            console.log(e);
-        });
-    }, */
 }
 </script>
 
 <style>
+.card {
+    margin: 1rem;
+}
 .img {
     position: relative;
 }
