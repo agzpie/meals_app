@@ -1,10 +1,16 @@
 <template>
-    <h5>Category</h5>
-    <TagElement 
-        v-for="tag in tagsSection"
-        :key="tag.strCategory"
-        :tag="tag"
-    />
+
+    <div class="card">
+        <h5 class="card-header">Category</h5>
+        <div class="card-body">
+            <TagElement 
+            v-for="tag in tagsSection"
+            :key="tag.strCategory"
+            :tag="tag"
+            />
+        </div>
+    </div>
+
 </template>
 
 <script>

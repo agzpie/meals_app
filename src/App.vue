@@ -5,6 +5,7 @@
   <div class="content">
     <Sidebar />
     <CardDisplay />
+    
 
   </div>
 
@@ -16,6 +17,7 @@ import Navbar from './components/Navbar.vue'
 import Sidebar from './components/Sidebar.vue';
 //import Card from './components/Card.vue'
 import CardDisplay from './views/CardDisplay.vue'
+//import Card from './components/Card.vue'
 //import axios from 'axios';
 
 export default {
@@ -24,6 +26,7 @@ export default {
     Navbar,
     Sidebar,
     CardDisplay
+    //Card
   },
 
   

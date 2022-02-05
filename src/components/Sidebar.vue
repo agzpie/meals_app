@@ -1,8 +1,9 @@
+<!-- TODO: map categories to a new object -->
 <template>
 <div class="side">
     <h3>Filter by</h3>
     <TagList  
-        :tagsSection="this.categories"
+        :tagsSection="categories"
     />
     
 </div>
@@ -11,6 +12,11 @@
 <script>
 import TagList from './TagList.vue'
 import Service from '../services/Service.js';
+import { reactive } from '@vue/reactivity';
+
+const categories = reactive({
+    data: [],
+});
 
 export default {
     components: {
@@ -19,8 +25,8 @@ export default {
 
     data() {
         return {
-            //tags: []
-            categories: Object
+            tags: [],
+            //categories: Object
         }
     },
 
@@ -28,8 +34,8 @@ export default {
         // Simple GET request using axios
         Service.getCategories()
             .then(response => {
-                this.categories = response.data.meals;
-                console.log(this.categories);
+                categories.data = response.data.meals;
+                console.log(categories.data);
             })
             .catch( error => {
                 console.log('There was an error: ' + error.response);

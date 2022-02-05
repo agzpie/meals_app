@@ -1,8 +1,20 @@
 import "bootstrap/dist/css/bootstrap.min.css"
-import { createApp } from "vue";
-import App from "./App.vue";
+import App from './App.vue';
+import { store } from './store/index.js';
+import { createApp } from 'vue';
 
-import Axios from 'axios';
+const app = createApp(App)
+
+app.use(store)
+
+app.mount("#app");
+
+/*
+Vue.config.productionTip = false;
+
 Axios.defaults.baseURL = '';
 
-createApp(App).mount("#app");
+new Vue({
+    store,
+    render: h => h(App)
+}).$mount('#app')*/

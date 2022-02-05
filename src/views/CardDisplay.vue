@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import Service from '../services/Service.js';
+//import Service from '../services/Service.js';
 import Card from '../components/Card.vue';
 
-export default {
+/*export default {
     name: 'CardDisplay',
     components: {
         Card,
@@ -37,6 +37,25 @@ export default {
                 console.log('There was an error: ' + error.response);
             })
     },
+}*/
+
+export default {
+    name: 'CardDisplay',
+    components: {
+        Card,
+    },
+    
+    computed: {
+        gettermeals() {
+            return this.$store.getters.allMeals
+        },
+        meals() {
+            return this.$store.state.meals
+        }
+    },
+    mounted() {
+        this.$store.dispatch("getMeals");
+    }
 }
 </script>
 

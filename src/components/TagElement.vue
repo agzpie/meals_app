@@ -1,7 +1,10 @@
 <template>
-  <ul>
-    <li class="element"><p>{{ tag.strCategory }}</p></li>
- </ul>
+
+
+<a href="#" class="btn btn-outline-secondary element">
+    {{ tag.strCategory }}
+</a>
+ 
 </template>
 
 <script>
@@ -15,5 +18,8 @@ export default {
 <style>
 .element {
     font-size: 0.8rem;
+    padding: 0.4rem;
+    margin: 0.2rem;
+    border-radius: 0;
 }
 </style>
