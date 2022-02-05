@@ -1,10 +1,7 @@
 <template>
-
-
-<a href="#" class="btn btn-outline-secondary element">
-    {{ tag.strCategory }}
-</a>
- 
+    <a href="#" class="btn btn-outline-secondary element">
+        {{ tag }}
+    </a>
 </template>
 
 <script>

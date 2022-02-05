@@ -1,32 +1,44 @@
-<!-- TODO: map categories to a new object -->
+<!-- TODO: mapGetters -->
 <template>
 <div class="side">
     <h3>Filter by</h3>
-    <TagList  
+    <TagList 
         :tagsSection="categories"
-    />
+    >Category</TagList>
+    <TagList  
+        :tagsSection="areas"
+    >Area</TagList>
     
 </div>
 </template>
 
 <script>
+//import { mapState } from 'vuex'
 import TagList from './TagList.vue'
-import Service from '../services/Service.js';
-import { reactive } from '@vue/reactivity';
-
-const categories = reactive({
-    data: [],
-});
 
 export default {
     components: {
         TagList
     },
 
-    data() {
+    computed: {
+        categories() {
+            return this.$store.state.categories
+        },
+        areas() {
+            console.log(this.$store.state)
+            return this.$store.getters.allAreas
+        }
+    },
+    mounted() {
+        this.$store.dispatch("getCategories");
+        this.$store.dispatch("getAreas");
+    }
+
+    /*data() {
         return {
             tags: [],
-            //categories: Object
+            categories: Object
         }
     },
 
@@ -41,8 +53,7 @@ export default {
                 console.log('There was an error: ' + error.response);
             })
 
-    },
-
+    },*/
 }
 </script>
 
