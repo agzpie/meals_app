@@ -11,33 +11,7 @@
 </template>
 
 <script>
-//import Service from '../services/Service.js';
 import Card from '../components/Card.vue';
-
-/*export default {
-    name: 'CardDisplay',
-    components: {
-        Card,
-    },
-
-    data() {
-        return {
-            meals: []
-        }
-    },
-
-    created() {
-        // Simple GET request using axios
-        Service.getEvents()
-            .then(response => {
-                console.log(response.data);
-                this.meals = response.data.meals;
-            })
-            .catch( error => {
-                console.log('There was an error: ' + error.response);
-            })
-    },
-}*/
 
 export default {
     name: 'CardDisplay',
