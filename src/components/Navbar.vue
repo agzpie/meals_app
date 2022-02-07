@@ -14,12 +14,6 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Features</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
         </ul>
       </div>
       <a class="navbar-brand">Meals</a>
@@ -27,6 +21,9 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
+
+    
+
     </div>
   </nav>
 </div>
@@ -36,12 +33,9 @@
 <script>
 
 export default {
-
-  data() {
-    return {
-
-    };
-  }
+    data() {
+        return {};
+    },
 };
 
 </script>

@@ -4,22 +4,40 @@
   <div class="content">
     <Sidebar />
     <CardDisplay />
+    <Favourites />
   </div>
 </div>  
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
+import Navbar from './components/Navbar.vue';
 import Sidebar from './components/Sidebar.vue';
-import CardDisplay from './views/CardDisplay.vue'
+import CardDisplay from './views/CardDisplay.vue';
+import Favourites from './components/Favourites.vue';
+
+import { computed } from 'vue';
+import { useStore } from 'vuex';
 
 export default {
   name: 'App',
   components: {
     Navbar,
     Sidebar,
-    CardDisplay
+    CardDisplay,
+    Favourites
   },
+
+  setup() {
+    const store = useStore();
+
+    let favourites = computed(function () {
+      return store.state.favourites
+    });
+
+    return {
+      favourites,
+    }
+  }
 }
 </script>
 

@@ -6,7 +6,8 @@ const state = {
     meals: [],
     categories: [],
     areas: [],
-    ingredients: []
+    ingredients: [],
+    favourites: []
 }
 
 //to handle state
@@ -77,6 +78,17 @@ const mutations = {
 
     SET_INGREDIENTS(state, ingredients) {
         state.ingredients = [...ingredients]
+    },
+
+    ADD_TO_FAVOURITES(state, item) {
+        item.quantity = 1;
+        state.favourites.push(item);
+    },
+
+    REMOVE_FAVOURITE(state, item) {
+        state.favourites = state.favourites.filter((favItem) => {
+            return favItem.id != item.id;
+        })
     }
 }
 
